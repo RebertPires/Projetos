@@ -1,0 +1,139 @@
+*{ /*se refere ao documento inteiro*/
+    margin: 0; /* zera a margem*/
+    padding: 0;
+    box-sizing: border-box; /*limita o tamanho dos itens para o tamanha da box em q ele está*/
+    
+}
+
+:root{ /*forma de criar variaveis no css*/
+    --azul: blue;
+    --preto: black;
+
+}
+
+/*BASE*/
+
+body{
+    background-color: var(--preto);
+    /*forma de usar a variavel criada no inicio do css*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+header .container{
+    border: 1px solid black;
+    display: flex; /*alinha os elementos*/
+    flex-direction: row; /*alinha os itens na vertical*/
+    align-items: center;
+    justify-content: space-between; /*alinha os itens na horizontal*/
+    
+}
+
+header .logo{ /*o ponto é usado nesses casos por se referir a "logo" q é uma variavel criada por mim no html*/
+    text-decoration: none;
+    /*margin-left: 10px;*/
+    color: var(--azul);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* a seleção de fonte é feita de acordo com a disponibilidade do dispositivo na qual é acessada, caso o pc não tenha a primera ele carrega a segunda, depois a terceira...*/
+    font-size: 40px;
+
+}
+
+header nav a{ /*se refere a todos os botoes criados no html, não é usado "." pq estou usando os elementos do proprio html*/
+    text-decoration: none;
+    color: gray;
+    margin-right: 10px;
+
+}
+
+header nav a:hover{ /*:hover = comando q é acionado qnd o mouse é passado em cima do elemento*/
+    color: white;
+
+}
+
+.titulo{
+    color: white;
+    font-size: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 20%;
+    text-transform: uppercase;
+
+}
+
+/*FILME PRINCIPAL*/
+
+.principal{
+    font-size: 15px;
+    color: white;
+    background: url('capa.jpg');
+    background: linear-gradient(rgba(0,0,0,.50),(rgba(0,0,0,.50))100%);
+    /*background: linear-gradient faz uma camada fina no texto para melhorar a visibilidade*/
+    height: 500px;
+    background-size: cover; /*comando q indica o tamanho da imagem utilizada no background, no caso cover ocupa todo o espaço*/
+
+    display: flex; /*arruma os itens em linha*/
+    flex-direction: column; /*arruma os itens em coluna*/
+    justify-content: center; /* sempre acompanha a direção do flex-direction*/
+    align-items: flex-start; /*inicia os elementos na esquerda, tambem segue a direção do flex-direction*/
+
+
+}
+
+.principal .descricao{
+    margin-bottom: 40px;
+    margin-top: 10px;
+
+}
+
+.botao:hover{
+background-color: gray;
+color: black;
+
+}
+
+.logo:hover{
+
+    color: rgb(101, 68, 247);
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color:white;
+
+    padding:15px;
+    margin-right: 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    transition: .3s ease all;
+    cursor: pointer;
+
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 20px;
+
+}
+
+.principal .container{
+    width: 70%;
+
+}
+
+.box-filme{
+    margin-top: 100%;
+    width: 100%;
+    display: block;
+
+}
+
+.carrosel{
+    
+    margin-bottom: 1px;
+
+}
